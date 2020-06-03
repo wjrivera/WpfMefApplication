@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using WpfCoreLibrary;
 using WpfMefApplication.Annotations;
-using WpfMefApplication.Models;
 
 namespace WpfMefApplication.ViewModels
 {

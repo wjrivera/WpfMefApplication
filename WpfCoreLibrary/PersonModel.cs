@@ -1,4 +1,8 @@
-﻿/*namespace WpfMefApplication.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace WpfCoreLibrary
 {
     public class PersonModel
     {
@@ -7,4 +11,3 @@
         public string Email { get; set; }
     }
 }
-*/

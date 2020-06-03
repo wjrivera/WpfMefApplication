@@ -12,11 +12,27 @@
             Orientation="Vertical"
             HorizontalAlignment="Center"
             VerticalAlignment="Center">
-            <Label Content="{Binding First}" />
-            <Label Content="{Binding Last}" />
-            <Label Content="{Binding FullName}" />
-            <Label Content="{Binding Email}" />
-            <Label Content="{Binding ValidEmail}" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="First" />
+                <Label Content="{Binding First}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Last" />
+                <Label Content="{Binding Last}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Full Name" />
+                <Label Content="{Binding FullName}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Email" />
+                <Label Content="{Binding Email}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Valid Email" />
+                <Label Content="{Binding ValidEmail}" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

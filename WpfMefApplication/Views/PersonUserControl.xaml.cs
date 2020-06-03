@@ -1,15 +1,25 @@
-﻿using System.Windows.Controls;
+﻿using System.ComponentModel.Composition;
+using System.Windows.Controls;
+using Mapster;
+using WpfCoreLibrary;
+using WpfMefApplication.ViewModels;
 
 namespace WpfMefApplication.Views
 {
     /// <summary>
     /// Interaction logic for PersonUserControl.xaml
     /// </summary>
-    public partial class PersonUserControl : UserControl
+    [Export(typeof(IPluginApplication))]
+    public partial class PersonUserControl : UserControl, IPluginApplication
     {
-        public PersonUserControl()
+        public bool Load(PersonModel person)
         {
-            InitializeComponent();
+            Dispatcher.Invoke(() =>
+            {
+                DataContext = person.Adapt<PersonViewModel>();
+                InitializeComponent();
+            });
+            return true;
         }
     }
 }
